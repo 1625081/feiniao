@@ -1,0 +1,31 @@
+<%= form_for(picture,html:{class: "ui big form"}) do |f| %>
+
+<div class="ui center aligned container" style="padding:5px">
+  <!-- <div class="ui form"> -->
+    <div class="field">
+      <%= f.label "姓名",:style => "font-weight:normal" %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <label style="font-weight:normal">性别</label>
+      <div class="ui selection dropdown">
+        <input type="hidden" name="picture[sex]">
+        <i class="dropdown icon"></i>
+        <div class="default text">Gender</div>
+        <div class="menu">
+            <div class="item" data-value="1">男</div>
+            <div class="item" data-value="0">女</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui error message"></div>
+
+    <div class="ui container">
+      <div class="ui gray basic big button" id="submit_info">生成专属民谣</div>
+    </div>
+
+  <!-- </div> -->
+</div>
+<% end %>
